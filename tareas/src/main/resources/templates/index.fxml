@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contenedor" prefHeight="513.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gm.tareas.controlador.IndexControlador">
+
+    <children>
+
+        <Label layoutX="399.0" layoutY="26.0" text="Sistema de tareas">
+            <font>
+                <Font name="Bodoni MT Bold" size="15.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="tareaTabla" layoutX="272.0" layoutY="91.0" onMouseClicked="#loadOnForm" prefHeight="366.0" prefWidth="413.0" styleClass="tabla-tareas">
+
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="40" text="ID" />
+                <TableColumn fx:id="taskColumn" text="TASK" />
+                <TableColumn fx:id="teacherColumn" text="TEACHER" />
+                <TableColumn fx:id="subjectColumn" prefWidth="62.000030517578125" text="SUBJECT" />
+                <TableColumn fx:id="observationColumn" prefWidth="98.0" text="Observations" />
+                <TableColumn fx:id="rdColumn" text="R-D" />
+                <TableColumn fx:id="odColumn" text="O-D" />
+                <TableColumn fx:id="statusColumn" text="STATUS" />
+            <TableColumn fx:id="testColumn" prefWidth="75.0" text="Column X" />
+            </columns>
+
+        </TableView>
+      <AnchorPane layoutX="14.0" layoutY="91.0" prefHeight="366.0" prefWidth="155.0">
+         <children>
+            <Label layoutX="19.0" layoutY="17.0" text="TASK" textFill="#73a2aa">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="71.0" text="Teacher" textFill="#73a2aa">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="3.0" layoutY="126.0" text="Subject" textFill="#73a2aa">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <TextField fx:id="taskText" layoutY="35.0" />
+            <TextField fx:id="teacherText" layoutY="89.0" />
+            <TextField fx:id="subjectText" layoutX="4.0" layoutY="144.0" />
+            <Label layoutX="4.0" layoutY="190.0" text="Comments" textFill="#73a2aa">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextArea fx:id="commentsText" layoutX="3.0" layoutY="207.0" prefHeight="155.0" prefWidth="151.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="178.0" layoutY="107.0" prefHeight="256.0" prefWidth="86.0">
+         <children>
+            <Button fx:id="addButton" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#addTaskUi" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #529456;" text="Add" textFill="WHITE" />
+            <Button fx:id="cleanButton" layoutX="17.0" layoutY="216.0" mnemonicParsing="false" onAction="#cleanForm" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #8f9d40;" text="Clean" textFill="#fbfbfb" />
+            <Button fx:id="deleteButton" layoutX="17.0" layoutY="141.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #841e1e;" text="Delete" textFill="WHITE" />
+            <Button fx:id="modifyButton" layoutX="17.0" layoutY="77.0" mnemonicParsing="false" onAction="#modifyTask" style="-fx-background-color: #4f9ab1;" text="Modify" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+
+    </children>
+</AnchorPane>

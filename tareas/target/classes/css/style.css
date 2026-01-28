@@ -1,0 +1,5 @@
+:root {
+    --primary-color: hsl(0, 0%, 100%);
+    --secondary-color: rgb(0, 125, 135) !important;
+    --fx-background-color: #c8f7c5;
+}
